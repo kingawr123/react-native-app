@@ -23,14 +23,14 @@ const styles = StyleSheet.create({
     margin: 10
   },
 
-  textInList:{
+  textInList: {
     fontSize: 20,
   },
 
-  textInListContainer:{
-  borderBottomWidth: .5,
-  borderBottomColor: 'black',
-  padding: 10
+  textInListContainer: {
+    borderBottomWidth: .5,
+    borderBottomColor: 'black',
+    padding: 10
   }
 });
 
@@ -58,30 +58,49 @@ class HomeScreen extends React.Component {
 }
 
 class PrimarySchoolList extends React.Component {
+
+  listOfSubsInPrimarySchool = [
+    {
+      title: 'Podstawowe słownictwo',
+      key: 'item1',
+      //przejście do konkretnej strony
+
+    },
+    {
+      title: 'To be',
+      key: 'item2',
+    },
+    {
+      title: 'Can, have got',
+      key: 'item3',
+    }
+  ]
+
+  renderItem({ item }) {
+    return <View style={styles.textInListContainer}><Button type="clear" titleStyle={styles.textInList} title={item.title}  onPress={() => alert("tu będzie przejście do nastepnej strony")}></Button></View>
+  }
+
   render() {
     return (
       <View>
-      <FlatList 
-      data={[
-        {
-          title: 'Podstawowe słownictwo',
-          key: 'item1'
-        },
-        {
-          title: 'Odmiana przez osoby',
-          key: 'item2'
-        }
-      ]}
-      renderItem={({item}) => 
-      <View style={styles.textInListContainer}>
-        <Button type="clear" titleStyle={styles.textInList} title={item.title}></Button>
-      </View>
-    }
-      />
+        <FlatList
+          data={this.listOfSubsInPrimarySchool}
+          renderItem={this.renderItem}
+        />
       </View>
     );
   }
 }
+
+// class Vocabulary extends React.Component {
+//   render() {
+//     return (
+//       <View>
+//         <Text>Tu będzie treść tematu</Text>
+//       </View>
+//     );
+//   }
+// }
 
 class HightSchoolList extends React.Component {
   render() {
@@ -100,6 +119,9 @@ const AppNavigator = createStackNavigator({
   PrimarySchoolList: {
     screen: PrimarySchoolList,
   },
+  // Vocabulary: {
+  //   sceen: Vocabulary
+  // },
   HightSchoolList: {
     screen: HightSchoolList
   },
