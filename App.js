@@ -72,7 +72,7 @@ const StackNavigator = createStackNavigator({
     initialRouteName: 'Home',
   });
 
-const AppContainer = createAppContainer(StackNavigator);
+const AppContainer = createAppContainer(StackNavigator); 
 
 export default class App extends React.Component {
   render() {

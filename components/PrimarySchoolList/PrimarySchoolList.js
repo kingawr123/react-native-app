@@ -3,6 +3,7 @@ import { Text, View, StyleSheet } from 'react-native';
 import { createStackNavigator, createAppContainer, StackActions, NavigationActions } from "react-navigation";
 import { Button, ListItem } from 'react-native-elements';
 import { FlatList } from 'react-native-gesture-handler';
+import { withNavigation } from 'react-navigation';
 // import { Vocabulary } from './Subjects/Vocabulary';
 
 export class PrimarySchoolList extends React.Component {
@@ -27,15 +28,16 @@ export class PrimarySchoolList extends React.Component {
     ]
 
     renderItem({ item }) {
-        return <View style={styles.textInListContainer}><Button type="clear" titleStyle={styles.textInList} title={item.title} ></Button></View>
+        return <View style={styles.textInListContainer}><Button type="clear" titleStyle={styles.textInList} title={item.title} onPress={() => this.props.navigation.navigate(item.nav)} ></Button></View>
     }
 
     render() {
         return (
             <View>
+            <Button onPress={() => this.props.navigation.navigate("Vocabulary")} title="title"></Button>
                 <FlatList
                     data={this.listOfSubsInPrimarySchool}
-                    renderItem={this.renderItem}
+                    renderItem={this.renderItem.bind(this)}
                 />
             </View>
         );
@@ -53,3 +55,5 @@ const styles = StyleSheet.create({
         padding: 10
     }
 });
+
+export default withNavigation(PrimarySchoolList);
