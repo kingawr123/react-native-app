@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
+import { fonts } from '../../../styles/base';
 
 export class Vocabulary extends React.Component {
     render(){
@@ -14,6 +15,6 @@ export class Vocabulary extends React.Component {
 const styles = StyleSheet.create({
     Text: {
         color: 'blue',
-        fontSize: 30
+        fontSize: fonts.subHeaderFontSize
     }
 })

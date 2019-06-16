@@ -1,10 +1,10 @@
 import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 import { createStackNavigator, createAppContainer, StackActions, NavigationActions } from "react-navigation";
-import { Button, ListItem } from 'react-native-elements';
+import { Button, Header } from 'react-native-elements';
 import { FlatList } from 'react-native-gesture-handler';
 import { withNavigation } from 'react-navigation';
-// import { Vocabulary } from './Subjects/Vocabulary';
+import { padd } from '../../styles/base';
 
 export class PrimarySchoolList extends React.Component {
 
@@ -13,7 +13,6 @@ export class PrimarySchoolList extends React.Component {
             title: 'Podstawowe słownictwo',
             key: 'item1',
             nav: 'Vocabulary',
-            //przejście do konkretnej strony
         },
         {
             title: 'To be',
@@ -34,11 +33,12 @@ export class PrimarySchoolList extends React.Component {
     render() {
         return (
             <View>
-            <Button onPress={() => this.props.navigation.navigate("Vocabulary")} title="title"></Button>
+
                 <FlatList
                     data={this.listOfSubsInPrimarySchool}
                     renderItem={this.renderItem.bind(this)}
                 />
+
             </View>
         );
     }
@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
     textInListContainer: {
         borderBottomWidth: .5,
         borderBottomColor: 'black',
-        padding: 10
+        padding: padd.listItem,
     }
 });
 

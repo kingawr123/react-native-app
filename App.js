@@ -1,15 +1,16 @@
 import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
-import { Button } from 'react-native-elements';
+import { Button, colors } from 'react-native-elements';
 import { createStackNavigator, createAppContainer } from "react-navigation";
 import { HightSchoolList } from './components/HightSchoolList/HightSchoolList';
 import { PrimarySchoolList } from './components/PrimarySchoolList/PrimarySchoolList';
-import { Vocabulary } from './components/PrimarySchoolList/Subjects/Vocabulary'
+import { Vocabulary } from './components/PrimarySchoolList/Subjects/Vocabulary';
+import { baseColors } from './styles/base';
 class HomeScreen extends React.Component {
   render() {
     return (
-      <View style={styles.headerContainer}>
-        <Text style={styles.header}>Angielski - Nauka Dla każdego</Text>
+      <View style={styles.Container}>
+        <Text style={styles.h1}>Angielski - Nauka Dla Każdego</Text>
         <Button
           containerStyle={styles.btnHomeSceen}
           title="PODSTAWÓWKA"
@@ -30,18 +31,24 @@ class HomeScreen extends React.Component {
   }
 }
 
+
 const styles = StyleSheet.create({
-  headerContainer: {
+  Container: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    backgroundColor: baseColors.primary,
   },
 
-  header: {
+  headerContainer: {
+    backgroundColor: baseColors.secondary
+  },
+
+  h1: {
     fontSize: 40,
     textAlign: 'center',
     fontWeight: 'bold',
-    color: '#2979FF',
+    color: baseColors.secondary,
   },
 
   btnHomeSceen: {
@@ -72,7 +79,7 @@ const StackNavigator = createStackNavigator({
     initialRouteName: 'Home',
   });
 
-const AppContainer = createAppContainer(StackNavigator); 
+const AppContainer = createAppContainer(StackNavigator);
 
 export default class App extends React.Component {
   render() {
