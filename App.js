@@ -19,7 +19,7 @@ class HomeScreen extends React.Component {
         <Text style={styles.h1}>Angielski - Nauka Dla Każdego</Text>
         <Button
           containerStyle={styles.btnHomeSceen}
-          title="PODSTAWÓWKA"
+          title="SZKOŁA PODSTAWOWA"
           titleStyle={styles.btnTitle}
           type="outline"
           raised={true}
@@ -36,7 +36,6 @@ class HomeScreen extends React.Component {
     );
   }
 }
-
 
 const styles = StyleSheet.create({
   container: {
