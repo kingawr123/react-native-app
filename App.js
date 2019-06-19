@@ -1,15 +1,21 @@
 import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
-import { Button, colors } from 'react-native-elements';
+import { Button, Image } from 'react-native-elements';
 import { createStackNavigator, createAppContainer } from "react-navigation";
 import { HightSchoolList } from './components/HightSchoolList/HightSchoolList';
 import { PrimarySchoolList } from './components/PrimarySchoolList/PrimarySchoolList';
 import { Vocabulary } from './components/PrimarySchoolList/Subjects/Vocabulary';
-import { baseColors } from './styles/base';
+import { baseColors, dimensions } from './styles/base';
 class HomeScreen extends React.Component {
   render() {
     return (
-      <View style={styles.Container}>
+      <View style={styles.container}>
+      <View style={styles.imgContainer}>
+      <Image 
+      style={styles.img}
+      source={require('./assets/eng-icon.png')}>
+      </Image>
+      </View>
         <Text style={styles.h1}>Angielski - Nauka Dla Każdego</Text>
         <Button
           containerStyle={styles.btnHomeSceen}
@@ -33,22 +39,22 @@ class HomeScreen extends React.Component {
 
 
 const styles = StyleSheet.create({
-  Container: {
+  container: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: baseColors.primary,
+    backgroundColor: baseColors.mainBackground,
   },
 
   headerContainer: {
-    backgroundColor: baseColors.secondary
+    backgroundColor: baseColors.mainHeader
   },
 
   h1: {
     fontSize: 40,
     textAlign: 'center',
     fontWeight: 'bold',
-    color: baseColors.secondary,
+    color: baseColors.mainHeader,
   },
 
   btnHomeSceen: {
@@ -58,6 +64,18 @@ const styles = StyleSheet.create({
 
   btnTitle: {
     fontSize: 20
+  },
+
+  img: {
+    height: 80,
+    width: dimensions.fullWidth / 3,
+    borderRadius: 10,
+  },
+
+  imgContainer: {
+    position: 'absolute',
+    top: dimensions.fullHeight / 8,
+    left: dimensions.fullWidth / 3
   }
 });
 

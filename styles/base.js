@@ -6,8 +6,8 @@ export const dimensions = {
   }
 
   export const baseColors  = {
-    primary: '#FFFFFF',
-    secondary: '#6997C9',
+    mainBackground: '#FFFFFF',
+    mainHeader: '#6997C9',
     tertiary: '#5DA6A7'
   }
 
