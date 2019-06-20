@@ -10,7 +10,7 @@ export class PrimarySchoolList extends React.Component {
 
     listOfSubsInPrimarySchool = [
         {
-            title: 'Podstawowe słownictwo',
+            title: "Podstawowe słownictwo",
             key: 'item1',
             nav: 'Vocabulary',
         },
