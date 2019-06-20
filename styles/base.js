@@ -8,7 +8,8 @@ export const dimensions = {
   export const baseColors  = {
     mainBackground: '#FFFFFF',
     mainHeader: '#6997C9',
-    tertiary: '#5DA6A7'
+    subHeader: '#FFFFFF',
+    subBackground: '#6997C9'
   }
 
   export const fonts = {

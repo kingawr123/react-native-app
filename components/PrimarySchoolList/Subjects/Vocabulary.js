@@ -1,20 +1,29 @@
 import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
-import { fonts } from '../../../styles/base';
+import { fonts, baseColors } from '../../../styles/base';
 
 export class Vocabulary extends React.Component {
     render(){
         return(
             <View>
-                <Text style={styles.Text}>Tu będzie ten temat</Text>
+            <View style={styles.headerContainer}>
+                <Text style={styles.text}>Podstawowe Słownictwo</Text>
+            </View>
             </View>
         )
     }
 }
 
 const styles = StyleSheet.create({
-    Text: {
-        color: 'blue',
-        fontSize: fonts.subHeaderFontSize
+    text: {
+        color: baseColors.subHeader,
+        fontSize: fonts.subHeaderFontSize,
+    },
+
+    headerContainer: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: baseColors.subBackground,
+        height: 80,
     }
 })

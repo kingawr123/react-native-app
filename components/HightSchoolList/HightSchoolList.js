@@ -9,17 +9,17 @@ export class HightSchoolList extends React.Component {
 
   listOfSubsInHightSchool = [
     {
-        title: 'Podstawowe słownictwo',
+        title: 'Present Perfect',
         key: 'item1',
         nav: 'Vocabulary',
     },
     {
-        title: 'To be',
+        title: 'Present Perfect Continous',
         key: 'item2',
         nav: 'Home',
     },
     {
-        title: 'Can, have got',
+        title: 'Past Perfect',
         key: 'item3',
         nav: 'Home',
     }
