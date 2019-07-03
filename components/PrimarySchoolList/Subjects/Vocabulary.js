@@ -6,8 +6,8 @@ import { ScrollView, FlatList } from 'react-native-gesture-handler';
 import { padd } from '../../../styles/base'
 
 export class Vocabulary extends React.Component {
-    
-    listOfVocabulary = [
+
+      listOfVocabulary = [
         {
             value: 'eat',
             key: 'jeść'
