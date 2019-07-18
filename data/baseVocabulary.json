@@ -1,14 +1,56 @@
 [
     {
-        "key": "Jeść",
-        "value": "Eat"
+        "fL": "B",
+        "show": false,
+        "vocabulary": [
+            {
+                "key": "Basen",
+                "value": "Swimming pool"
+            }
+        ]
     },
     {
-        "key": "Jeździć",
-        "value": "Ride"
+        "fL": "C",
+        "show": true,
+        "vocabulary": [
+            { 
+                "key": "Cytryna",
+                "value": "Lemon"
+            }
+        ]
     },
     {
-        "key": "Spać",
-        "value": "Sleep"
+        "fL": "D",
+        "show": false,
+        "vocabulary": [
+            {
+                "key": "Dom",
+                "value": "Home"
+            }
+        ]
+    },
+    {
+        "fL": "J",
+        "show": false,
+        "vocabulary":[
+            {
+                "key": "Jeść",
+                "value": "Eat"
+            },
+            {
+                "key": "Jeździć",
+                "value": "Ride"
+            }
+        ]
+    },
+    {
+        "fL": "S",
+        "show": false,
+        "vocabulary":[
+            {
+                "key": "Spać",
+                "value": "Sleep"
+            }
+        ]
     }
 ]
